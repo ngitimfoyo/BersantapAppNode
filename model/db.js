@@ -44,5 +44,19 @@ var users = new mongoose.Schema({
 	'created_at': {type: Date, 'default': Date.now},
 	'updated_at':{type: Date, 'default': Date.now}	
 });
+
+var client_details = new mongoose.Schema({
+	'id': mongoose.Schema.Types.ObjectId,
+	'guid':String,
+	'name':String,
+	'latitude':String,
+	'longitude':String,
+	'type_id':Number,
+	'status_id':Number,
+	'created_at': {type: Date, 'default': Date.now},
+	'updated_at':{type: Date, 'default': Date.now}
+});
+
 	
 mongoose.model( 'User', users );
+mongoose.model('ClientDetail',client_details);
